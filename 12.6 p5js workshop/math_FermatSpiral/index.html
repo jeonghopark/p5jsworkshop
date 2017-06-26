@@ -1,0 +1,56 @@
+<!-- http://paulbourke.net/geometry/cornu/ -->
+
+<style>
+    html,
+    body {
+        height: 100%;
+    }
+
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+
+<script src="p5.js"></script>
+
+<script>
+    var screenRatio = {
+        w: 0.8,
+        h: 0.8
+    };
+
+    var radius; 
+    var theta;
+    var a;
+    
+    function setup() {
+        createCanvas(windowWidth * screenRatio.w, windowHeight * screenRatio.h);
+        background(245);
+
+        a = 5;
+        radius = 0;
+        theta = 0;
+
+        translate(width * 0.5, height * 0.5);
+        
+        for (var ind=0; ind<3600; ind+=1) {
+            i = ind * 0.5;
+            radius = a * pow(i, 0.5);
+            var _x = cos(radians(i)) * radius;
+            var _y = sin(radians(i)) * radius;
+            rect(_x, _y, 3, 3);
+        }
+    }
+
+    
+    function windowResized() {
+        resizeCanvas(windowWidth * screenRatio.w, windowHeight * screenRatio.h);
+    }
+
+</script>
+
+

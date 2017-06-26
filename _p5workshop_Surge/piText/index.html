@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+	<title>__First</title>
+	<script type="text/javascript" src="js/p5.js"></script>
+
+	<style>
+		body {
+			background-color: black;
+			margin: 0px;
+		}
+	</style>
+
+</head>
+<body>
+
+	<script type="text/javascript">
+		var pinumber;
+
+		function preload() {
+			pinumber = loadStrings("assets/pi.txt");
+		}
+
+		function setup(){
+			createCanvas(windowWidth, windowHeight);
+			colorMode(HSB, 100);
+		}
+
+		function draw(){
+			background(0);
+			fill(255)
+			translate( 10, 10 );
+			
+			for (var i = 0; i < 100; i++) {
+				for (var j = 0; j < 100; j++) {
+					var _index = i + j * 100;
+					fill(pinumber[0][_index] * 10, 255, 255);
+					ellipse(20 * i, 20 * j, 20, 20);
+					fill(255, 0, 255);
+					text(pinumber[0][_index], 20 * i - 3.5, 20 * j + 3.5);
+				}	
+			}
+		}
+
+	</script>
+
+</body>
+</html>

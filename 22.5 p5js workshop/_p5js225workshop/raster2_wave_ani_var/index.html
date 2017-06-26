@@ -1,0 +1,28 @@
+<script type="text/javascript" src="p5.js"></script>
+
+
+<script type="text/javascript">
+    var chg;
+
+    function setup() {
+        createCanvas(800, 600);
+        chg = 0;
+    }
+
+    function draw() {
+        background(255);
+        chg = chg + 2;
+        var sizeR = sin(radians(chg)) * 40;
+
+        for (var w = 0; w < 160; w += 4) {
+            for (var h = 0; h < 120; h += 4) {
+                var sizeC = sizeR * sin(radians(map(w, 0, 160, 0, 720)));
+                push();
+                translate(w * 10, h * 10);
+                fill(255, 0);
+                rect(0, 0, sizeC, sizeC);
+                pop();
+            }
+        }
+    }
+</script>

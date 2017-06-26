@@ -1,0 +1,77 @@
+<style>
+    html,
+    body {
+        height: 100%;
+    }
+
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+
+<script src="p5.js"></script>
+
+<script>
+    var yInc = new Array();
+
+    var bNoise;
+    var lengthS;
+
+    var movePt = 0;
+
+    var screenRatio = {
+        w: 1.0,
+        h: 1.0
+    };
+
+    function setup() {
+        createCanvas(windowWidth * screenRatio.w, windowHeight * screenRatio.h);
+    }
+
+    function draw() {
+        background(255);
+        vertexBg();
+    }
+    
+    function windowResized() {
+        resizeCanvas(windowWidth * screenRatio.w, windowHeight * screenRatio.h);
+    }
+
+    
+    function vertexBg(){
+
+        var _step = 20;
+        var _stepSize = 40;
+        movePt = movePt + 1;            
+
+        beginShape(TRIANGLES);
+        var _index = 0;
+        for (var h=0; h<_step; h++){
+            for (var w=0; w<_step; w++){
+
+                var _x = w * _stepSize;
+                var _x1 = (w+1) * _stepSize;
+                var _y = h * _stepSize;
+                var _y1 = (h+1) * _stepSize;
+
+                _index++;
+
+                fill(_index * 1.5, 0, 0);
+                vertex(_x, _y);
+                vertex(_x, _y1);
+                vertex(_x1, _y1);
+
+                vertex(_x, _y);
+                vertex(_x1, _y1);
+                vertex(_x1, _y);
+            }
+        }
+        endShape();
+    }
+
+
+</script>

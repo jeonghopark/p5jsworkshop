@@ -1,0 +1,32 @@
+<script type="text/javascript" src="p5.js"></script>
+
+<script type="text/javascript">
+    function setup() {
+        createCanvas(800, 800);
+    }
+
+    function draw() {
+        background(255);
+
+        var xoff1 = 0;
+        var xoff2 = 0;
+        var xoff3 = 0;
+
+        for (var w = 0; w < 160; w += 2) {
+            xoff1 = xoff1 + 0;
+            var y = noise(xoff1) * 200 + 100;
+            line(w * 5, y, w * 5, 200);
+            ellipse(w * 5, y, 4, 4);
+
+            xoff2 = xoff2 + 0.01;
+            var y = noise(xoff2) * 200 + 300;
+            line(w * 5, y, w * 5, 400);
+            ellipse(w * 5, y, 4, 4);
+
+            xoff3 = xoff3 + 0.1;
+            var y = noise(xoff3) * 200 + 500;
+            line(w * 5, y, w * 5, 600);
+            ellipse(w * 5, y, 4, 4);
+        }
+    }
+</script>

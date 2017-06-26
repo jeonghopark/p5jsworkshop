@@ -1,0 +1,23 @@
+<script type="text/javascript" src="p5.js"></script>
+
+<script type="text/javascript">
+    var inc;
+    var start;
+
+    function setup() {
+        createCanvas(800, 800);
+        inc = 0.02;
+        start = 0;
+    }
+
+    function draw() {
+        background(255);
+        var xoff = start;
+        for (var w = 0; w < 160; w += 2) {
+            xoff = xoff + inc;
+            var yPos = noise(xoff) * 300 + 400;
+            ellipse(w * 5, yPos, 4, 4);
+        }
+        start = start + inc;
+    }
+</script>

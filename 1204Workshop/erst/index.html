@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <script src="p5.js"></script>
+    
+    <style>
+        body{
+            margin: 0px;
+        }
+    </style>
+    
+</head>
+
+
+<body>
+
+    <script>
+        function setup() {
+            createCanvas(windowWidth, windowHeight);
+        }
+
+
+        function draw() {
+            background(0);
+                        
+            noFill();
+            stroke(255, 60);
+            for( var i=0; i<1000; i++) {
+                
+                line(random(width), random(height), width/2, height/2);
+            }
+            
+        }
+        
+        
+        
+        
+        
+    </script>
+    
+
+</body>
+
+
+</html>

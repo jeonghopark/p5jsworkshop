@@ -1,0 +1,98 @@
+<script src="p5.js"></script>
+
+
+<script>
+
+    var circles;
+    var circles2;
+    var circles3;
+    var circles4;
+    var circles5;
+
+    var drawBuff = [];
+
+    function setup(){
+        createCanvas(800, 800);
+        circles = new CircleClass(width * 0.5, height * 0.5, 200, 1);
+        circles2 = new CircleClass(circles.mX, circles.mY, 80, 10);
+        circles3 = new CircleClass(circles2.mX, circles2.mY, 20, 20);
+        circles4 = new CircleClass(circles3.mX, circles3.mY, 20, 20);
+        circles5 = new CircleClass(circles3.mX, circles3.mY, 20, 2);
+    }
+
+    function draw(){
+        background(180);
+
+        circles.update(width * 0.5, height * 0.5, 0);
+        circles.display();
+
+        circles2.update(circles.mX, circles.mY, 180);
+        circles2.display();
+
+
+        circles3.update(circles2.mX, circles2.mY, 0);
+        circles3.display();
+
+        circles4.update(circles3.mX, circles3.mY, 0);
+        circles4.display();
+
+        circles5.update(circles4.mX, circles4.mY, 0);
+        circles5.display();
+
+        drawBuff.push(circles5.mX);
+        drawBuff.push(circles5.mY);
+
+        for (var i = 0; i < drawBuff.length; i+=2) {
+            line(drawBuff[i+0], drawBuff[i+1], drawBuff[i+2], drawBuff[i+3]);
+            if (drawBuff.length > 800) {
+                drawBuff.splice(i, 1);
+                drawBuff.splice(i, 1);
+            }
+        }
+
+        text(drawBuff.length, 10, 10);
+    }
+
+    function CircleClass(x, y, size, speed){
+        this.xPos = x;
+        this.yPos = y;
+        this.size = size;
+
+        this.xCircle = 0;
+        this.yCircle = 0;
+
+        this.mX = 0;
+        this.mY = 0;
+
+        this.value = 0;
+
+        this.speed = speed;
+
+        this.movX = 0;
+        this.movY = 0;
+
+        this.update = function(x, y, p){
+            this.value = this.value - this.speed;
+            this.mX = sin(radians(this.value + p)) * this.size + x;
+            this.mY = cos(radians(this.value + p)) * this.size + y;
+            this.movX = x;
+            this.movY = y;
+        };
+
+        this.display = function(){
+            push();
+            noFill();
+            stroke(30, 80);
+            stroke(255);
+            fill(255);
+            ellipse(this.movX, this.movY, 4, 4);
+            stroke(0, 80);
+            noFill();
+            ellipse(this.movX, this.movY, this.size * 2, this.size * 2);
+            pop();
+        };
+
+    }
+
+
+</script>

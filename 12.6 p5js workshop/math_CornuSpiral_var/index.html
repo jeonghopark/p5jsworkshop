@@ -1,0 +1,97 @@
+<!-- http://paulbourke.net/geometry/cornu/ -->
+
+<style>
+    html,
+    body {
+        height: 100%;
+    }
+
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<script src="p5.js"></script>
+
+<script>
+    var screenRatio = {
+        w: 0.8,
+        h: 0.8
+    };
+
+    var parameter = 1;
+    var parameterMin = 0.5;
+    var parameterMax = 50;
+    var parameterStep = 0.1;
+
+    var changeParameter = 1.0;
+
+    function setup() {
+        createCanvas(windowWidth * screenRatio.w, windowHeight * screenRatio.h);
+    }
+
+    function draw() {
+        background(190, 245, 215);
+
+        noFill();
+        stroke(145, 123, 210, 255);
+
+        var _size = 10;
+
+        translate(width * 0.5, height * 0.5);
+
+        if (frameCount % 1 == 0)
+            changeParameter = changeParameter + 0.000002;
+
+        let L = 1000;
+
+        beginShape(LINE_STRIP);
+        dCal(L, 4.0, 0, _size);
+        endShape();
+
+        beginShape(LINE_STRIP);
+        dCal(L, 4.0, PI, _size);
+        endShape();
+
+    }
+
+
+    function dCal(L, time, degree, _size){
+        let _x = 0;
+        let _y = 0;
+        for (var z=0; z<L; z+=changeParameter) {
+            let dz = z/L;
+            let _dx = cos(Math.PI * radians(z * z) / 4.0 + degree) * dz * _size;
+            let _dy = sin(Math.PI * radians(z * z) / 4.0 + degree) * dz * _size;
+            _x = _x + _dx;
+            _y = _y + _dy;
+            vertex(_x, _y);
+        }
+        for (var z=0; z<L; z+=changeParameter) {
+            let dz = z/L;
+            let _dx = cos(Math.PI * radians(z * z) / 2.0 + degree) * dz * _size;
+            let _dy = sin(Math.PI * radians(z * z) / 2.0 + degree) * dz * _size;
+            _x = _x + _dx;
+            _y = _y + _dy;
+            vertex(_x, _y);
+        }
+        for (var z=0; z<L; z+=changeParameter) {
+            let dz = z/L;
+            let _dx = cos(Math.PI * radians(z * z) / 1.0 + degree) * dz * _size;
+            let _dy = sin(Math.PI * radians(z * z) / 1.0 + degree) * dz * _size;
+            _x = _x + _dx;
+            _y = _y + _dy;
+            vertex(_x, _y);
+        }
+    }
+    
+    function windowResized() {
+        resizeCanvas(windowWidth * screenRatio.w, windowHeight * screenRatio.h);
+    }
+
+</script>
+
+

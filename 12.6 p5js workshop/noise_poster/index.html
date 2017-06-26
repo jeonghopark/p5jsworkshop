@@ -1,0 +1,51 @@
+<style>
+    html,
+    body {
+        height: 100%;
+    }
+
+    body {
+        margin: 0;
+        display: flex;
+
+        /* This centers our sketch horizontally. */
+        justify-content: center;
+
+        /* This centers our sketch vertically. */
+        align-items: center;
+    }
+</style>
+
+
+
+<script src="p5.js"></script>
+
+<script>
+    var incY;
+
+    function setup() {
+        createCanvas(1200, 600);
+        incY = 0;
+
+        translate(0, 300);
+        for (var i = 0; i < width; i += 4) {
+            incY = incY + 0.01;
+            var _yRatio = 0;
+            if (i < width * 0.5) {
+                _yRatio = map(i, 0, width * 0.5 - 4, 0, 0.5);
+            } else {
+                _yRatio = map(i, width * 0.5 - 4, width, 0.5, 0);
+            }
+
+            var _y = noise(incY) * height * _yRatio;
+            for (var num = 0; num < 40; num++) {
+                rect(i, _y * num / 40, 2, 2);
+                rect(i, -_y * num / 40, 2, 2);
+            }
+        }
+    }
+
+    function draw() {
+
+    }
+</script>

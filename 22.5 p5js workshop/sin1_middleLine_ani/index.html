@@ -1,0 +1,23 @@
+<script type="text/javascript" src="p5.js"></script>
+
+<script type="text/javascript">
+    var chg;
+
+    function setup() {
+        createCanvas(800, 600);
+        chg = 0;
+    }
+
+    function draw() {
+        background(255);
+
+        chg = chg + 0.05;
+
+        for (var w = 0; w < 160; w += 4) {
+            var y = sin(radians(map(w, 0, 160, 0, 360)) + chg) * 100 + 300;
+            line(w * 5, 300, w * 5, y);
+            ellipse(w * 5, y, 4, 4);
+
+        }
+    }
+</script>

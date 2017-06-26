@@ -1,0 +1,23 @@
+<script type="text/javascript" src="p5.js"></script>
+
+
+<script type="text/javascript">
+    function setup() {
+        createCanvas(800, 600);
+    }
+
+    function draw() {
+        background(60);
+
+        for (var w = 0; w < 80; w++) {
+            for (var h = 0; h < 60; h++) {
+                push();
+                translate(w * 10, h * 10);
+                rotate(radians(45));
+                rect(0, 0, 10, 10);
+                pop();
+            }
+        }
+
+    }
+</script>

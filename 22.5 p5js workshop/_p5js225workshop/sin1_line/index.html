@@ -1,0 +1,17 @@
+<script type="text/javascript" src="p5.js"></script>
+
+<script type="text/javascript">
+    function setup() {
+        createCanvas(800, 600);
+    }
+
+    function draw() {
+        background(255);
+
+        for (var w = 0; w < 160; w += 4) {
+            var y = sin(radians(map(w, 0, 160, 0, 360))) * 100 + 300;
+            line(w * 5, 0, w * 5, y);
+            ellipse(w * 5, y, 4, 4);
+        }
+    }
+</script>

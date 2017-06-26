@@ -1,0 +1,138 @@
+<style type="text/css">
+    html, body {
+        height: 100%;
+    }
+
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<script src="p5.js"></script>
+
+
+<script>
+    var screenRatio = {
+        w: 0.8,
+        h: 0.8
+    };
+
+    var degree = 0;
+
+    function setup(){
+        createCanvas(windowWidth * screenRatio.w, windowHeight * screenRatio.h);
+        background(245, 255, 255);
+    }
+
+    function draw(){
+        degree = degree + 1;
+
+        if (degree > 720) {
+            degree = 0;
+            background(245, 255, 255);
+        }
+
+        var size = 50;
+
+        stroke(40, 120);
+
+        translate(width * 0.5, height * 0.5);
+
+        //-----------------------------------------
+        beginShape(LINE_STRIP);
+        stroke(180, 120, 255, 120);
+
+        for (var t=0; t<degree; t++) {
+
+            var radiusS = 1.0 + 3.0 * cos( 3 * radians(t) );
+            var thetaS = PI / 4.0 - sin( radians(t) );
+
+            var radiusE = 1.0 + 3.0 * cos( 3 * radians(t+1) );
+            var thetaE = PI / 4.0 - sin( radians(t+1) );
+
+            var xs = cos(thetaS) * radiusS * size;
+            var ys = sin(thetaS) * radiusS * size;
+
+            var xe = cos(thetaE) * radiusE * size;
+            var ye = sin(thetaE) * radiusE * size;
+
+            vertex(xs, ys);
+            vertex(xe, ye);
+        }
+        endShape();
+        
+        
+        //-----------------------------------------
+        beginShape(LINE_STRIP);
+        stroke(255, 120, 180, 120);
+        for (var t=0; t<degree; t++) {
+            var xs = 2.0 * cos( 7.0 * radians(t) ) * size;
+            var ys = 2.0 * sin( 5.0 * radians(t) ) * size;
+            var xe = 2.0 * cos( 7.0 * radians(t+1) ) * size;
+            var ye = 2.0 * sin( 5.0 * radians(t+1) ) * size;
+            vertex(xs, ys);
+            vertex(xe, ye);
+        }
+        endShape();
+        
+        
+        
+        //-----------------------------------------
+        rotate( radians(-90) );
+        noFill();
+        stroke(235, 130, 100, 120);
+        beginShape(LINE_STRIP);
+        for (var t=0; t<(degree*4); t++) {
+
+            var p1s = exp( cos( radians(t)) );
+            var p2s = 2.0 * cos( 4.0 * radians(t) );
+            var p3s = pow( sin( t / 12.0 ), 5.0 );
+
+            var p1e = exp( cos( radians(t+1)) );
+            var p2e = 2.0 * cos( 4.0 * radians(t+1) );
+            var p3e = pow( sin( (t+1) / 12.0 ), 5.0 );
+
+            var xs = cos( radians(t) ) * (p1s - p2s - p3s) * size;
+            var ys = sin( radians(t) ) * (p1s - p2s - p3s) * size;
+
+            var xe = cos( radians(t+1) ) * (p1e - p2e - p3e) * size;
+            var ye = sin( radians(t+1) ) * (p1e - p2e - p3e) * size;
+
+            // rect(x, y, 1, 1);
+            // line(xs, ys, xe, ye);
+            vertex(xs, ys);
+            vertex(xe, ye);
+        }
+        endShape();
+
+
+        //-----------------------------------------
+        beginShape(LINE_STRIP);
+        stroke(120, 255, 180, 120);
+        for (var t=0; t<360 * 5; t++) {
+            var a = 1;
+            var radiusS = a * pow(radians(t), 0.75); 
+            // a * radians(t) * radians(t)
+
+            var radiusE = a * pow(radians(t+1), 0.75); 
+
+            var xs = cos( radians(t) ) * radiusS * 10;
+            var ys = sin( radians(t) ) * radiusS * 10;
+            var xe = cos( radians(t+1) ) * radiusE * 10;
+            var ye = sin( radians(t+1) ) * radiusE * 10;
+            vertex(xs, ys);
+            vertex(xe, ye);
+        }
+        endShape();
+
+    }
+
+    function windowResized() {
+        resizeCanvas(windowWidth * screenRatio.w, windowHeight * screenRatio.h);
+    }
+
+</script>
+

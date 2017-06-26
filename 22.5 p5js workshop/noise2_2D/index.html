@@ -1,0 +1,31 @@
+<script type="text/javascript" src="p5.js"></script>
+
+<script type="text/javascript">
+    var inc = {};
+    var incx = {};
+    var incy = {};
+    var xoff = {};
+    var yoff = {};
+
+    function setup() {
+        createCanvas(windowWidth, windowHeight);
+        for (var i = 0; i < 10; i++) {
+            xoff[i] = random();
+            yoff[i] = random() * 10;
+            inc[i] = random(0.01, 0.03);
+            incx[i] = random(0.01, 0.03);
+            incy[i] = random(0.01, 0.03);
+        }
+    }
+
+    function draw() {
+        for (var i = 0; i < 10; i++) {
+            xoff[i] = xoff[i] + incx[i];
+            yoff[i] = yoff[i] + incy[i];
+            var x = noise(xoff[i]) * width;
+            var y = noise(yoff[i]) * height;
+            stroke(0);
+            ellipse(x, y, 1, 1);
+        }
+    }
+</script>

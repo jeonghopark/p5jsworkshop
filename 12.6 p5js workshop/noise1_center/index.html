@@ -1,0 +1,78 @@
+<style>
+    html,
+    body {
+        height: 100%;
+    }
+
+    body {
+        margin: 0;
+        display: flex;
+
+        /* This centers our sketch horizontally. */
+        justify-content: center;
+
+        /* This centers our sketch vertically. */
+        align-items: center;
+    }
+</style>
+
+
+
+<script src="p5.js"></script>
+
+<script>
+    var yInc = new Array();
+    var yInc2 = new Array();
+
+    function setup() {
+        createCanvas(1000, 400);
+        for (var i = 0; i < 20; i++) {
+            yInc[i] = random() * 100000;
+            yInc2[i] = random() * 100000;
+        }
+    }
+
+    function draw() {
+
+        background(0);
+        stroke(255);
+
+        push();
+        translate(width * 0.5, 0);
+
+        for (var num = 0; num < yInc.length; num += 1) {
+            var yOffset = yInc[num];
+            for (var i = 0; i < width * 0.5; i += 4) {
+                yOffset = yOffset + 0.005;
+                yOffset1 = yOffset + 0.005;
+                var _y1 = noise(yOffset) * height * i / width * 4 + map(i, 0, width * 0.5, 200, -200);
+                var _y2 = noise(yOffset1) * height * i / width * 4 + map(i, 0, width * 0.5, 200, -200);
+
+                stroke(255, map(i, 0, width * 0.5, 0, 255));
+                line(i, _y1, i + 4, _y2);
+            }
+            yInc[num] = yInc[num] + 0.01;
+        }
+        pop();
+
+        push();
+        translate(0, 0);
+
+        for (var num = 0; num < yInc2.length; num += 1) {
+            var yOffset2 = yInc2[num];
+            for (var i = width * 0.5; i > 0; i -= 4) {
+                yOffset2 = yOffset2 + 0.005;
+                yOffset21 = yOffset2 + 0.005;
+                var _y21 = noise(yOffset2) * height * (i - width * 0.5) / width * 4 + map(i, width * 0.5, 0, 200, 600);
+                var _y22 = noise(yOffset21) * height * (i - width * 0.5) / width * 4 + map(i, width * 0.5, 0, 200, 600);
+
+                stroke(255, map(i, 0, width * 0.5, 255, 0));
+                line(i, _y21, i - 4, _y22);
+            }
+            yInc2[num] = yInc2[num] + 0.01;
+        }
+        pop();
+
+
+    }
+</script>

@@ -1,0 +1,44 @@
+<style>
+    html,
+    body {
+        height: 100%;
+    }
+
+    body {
+        margin: 0;
+        display: flex;
+
+        /* This centers our sketch horizontally. */
+        justify-content: center;
+
+        /* This centers our sketch vertically. */
+        align-items: center;
+    }
+</style>
+
+
+
+<script src="p5.js"></script>
+
+<script>
+
+    var startY;
+
+    function setup(){
+        createCanvas(800, 400);
+        startY = 0;
+    }
+
+    function draw(){
+        background(245);
+
+        var incY = startY;
+        for (var i=0; i<width; i+=4) {
+            incY = incY + 0.01;
+            var _y = noise(incY) * height;
+            rect(i, _y, 4, 4);
+        }
+        startY = startY + 0.01;
+    }
+
+</script>

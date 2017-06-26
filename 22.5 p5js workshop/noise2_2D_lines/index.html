@@ -1,0 +1,33 @@
+<script type="text/javascript" src="p5.js"></script>
+
+<script type="text/javascript">
+    var xoff1;
+    var yoff1;
+    var xoff2;
+    var yoff2;
+
+    var inc;
+
+    function setup() {
+        createCanvas(windowWidth, windowHeight);
+        xoff1 = 0;
+        yoff1 = 0;
+        xoff2 = 0;
+        yoff2 = 0;
+        inc = 0;
+    }
+
+    function draw() {
+        inc = inc + 0.01;
+        xoff1 = 1 + inc;
+        yoff1 = 2 + inc;
+        xoff2 = 3 + inc;
+        yoff2 = 4 + inc;
+        x1 = noise(xoff1) * width;
+        y1 = noise(yoff1) * height;
+        x2 = noise(xoff2) * width;
+        y2 = noise(yoff2) * height;
+        stroke(0, 40);
+        line(x1, y1, x2, y2);
+    }
+</script>

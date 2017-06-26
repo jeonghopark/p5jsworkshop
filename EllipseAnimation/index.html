@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>__First</title>
+	<script type="text/javascript" src="js/p5.js"></script>
+
+	<style>
+		body {
+			background-color: lightblue;
+		}
+	</style>
+
+</head>
+<body>
+
+	<script type="text/javascript">
+		var xPos, yPos;
+
+		function setup(){
+			xPos = 0;
+			yPos = 0;
+			createCanvas(600, 300);
+		}
+
+		function draw(){
+			background(255);
+			var _speed = 3.0;
+			xPos += _speed;
+			yPos += _speed;
+			fill(0,0,255);
+			ellipse(xPos, yPos, 20, 20);
+			if (xPos > width) xPos = 0;
+			if (yPos > height) yPos = 0;
+		}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!-- http://paulbourke.net/geometry/supershape/ -->
+<style>
+    html,
+    body {
+        height: 100%;
+    }
+
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+
+<script src="p5.js"></script>
+
+<script>
+
+    var screenRatio = {
+        w: 0.8,
+        h: 0.5
+    };
+
+    function setup() {
+        createCanvas(windowWidth * screenRatio.w, windowHeight * screenRatio.h, WEBGL);
+    }
+
+    function draw(){
+        background(0);
+        // translate(width * 0.5, height * 0.5);
+        // noFill();
+        // stroke(100, 100, 200, 120);
+
+
+        ambientLight(20);        
+        directionalLight(200, 0, 0, 255, 255, 255);
+        pointLight(200, 0, 0, 255, 100, 0);
+
+        var _rX = map(mouseY, 0, height, 0, 360);
+        var _rY = map(mouseX, 0, width, 0, 360);
+
+        fill(120);
+
+        // _rX = 0;
+        // _rY = 0;
+
+        var radiusTh = 0;
+        var radiusDt= 0;
+        var m = 5.0;
+        var n1 = 1.0;
+        var n2 = 5.7;
+        var n3 = 5.7;
+        var a = 1;
+        var b = 1;
+
+        var _size = 30;
+
+        // fill(0, 120);
+        beginShape(TRIANGLE_STRIP);
+
+        var _tNum = 25;
+        var _dNum = 35;
+
+        rotateX(radians(mouseX));
+        rotateY(radians(mouseY));
+
+        for (var theta=0; theta<_tNum; theta++){
+            for (var delta=0; delta<_dNum-1; delta++){
+
+                var _th = map(theta, 0, _tNum, -PI, PI);
+                var _dt = map(delta, 0, _dNum-1, -PI/2, PI/2);
+                radiusTh = pow( (pow(abs(cos(m * _th / 4.0) / a), n2) + pow(abs(sin(m * _th / 4.0) / b), n3)), -1/n1);
+                radiusDt = pow( (pow(abs(cos(m * _dt / 4.0) / a), n2) + pow(abs(sin(m * _dt / 4.0) / b), n3)), -1/n1);
+
+                var _x = radiusTh * cos(_th) * radiusDt * cos(_dt) * _size;
+                var _y = radiusTh * sin(_th) * radiusDt * cos(_dt) * _size;
+                var _z = radiusDt * sin(_dt) * _size;
+
+                var v = createVector(0, 0, 0);
+                v = rotationXY( createVector(_x, _y, _z), _rX, _rY);
+                
+                fill(theta * 12, 0, 0);
+
+                vertex(_x, _y, _z);
+
+
+                var _th1 = map(theta+1, 0, _tNum, -PI, PI);
+                var _dt1 = map(delta+1, 0, _dNum, -PI/2, PI/2);
+                radiusTh1 = pow( (pow(abs(cos(m * _th1 / 4.0) / a), n2) + pow(abs(sin(m * _th1 / 4.0) / b), n3)), -1/n1);
+                radiusDt1 = pow( (pow(abs(cos(m * _dt1 / 4.0) / a), n2) + pow(abs(sin(m * _dt1 / 4.0) / b), n3)), -1/n1);
+                var _x1 = radiusTh1 * cos(_th1) * radiusDt1 * cos(_dt1) * _size;
+                var _y1 = radiusTh1 * sin(_th1) * radiusDt1 * cos(_dt1) * _size;
+                var _z1 = radiusDt1 * sin(_dt1) * _size;
+
+
+                var v1 = createVector(0, 0, 0);
+                v1 = rotationXY( createVector(_x1, _y1, _z), _rX, _rY);
+                vertex(_x1, _y1, _z1);
+
+            }
+            
+        }
+        endShape();
+
+    }
+
+    
+    function windowResized() {
+        resizeCanvas(windowWidth * screenRatio.w, windowHeight * screenRatio.h);
+    }
+
+
+    function rotationXY(v, _rX, _rY) {
+        // https://www.siggraph.org/education/materials/HyperGraph/modeling/mod_tran/3drota.htm
+        // _x1 = _x;
+        // _y1 = _y * cos(radians(_rX)) + _z * sin(radians(_rX));
+        // _z1 = _y * -sin(radians(_rX)) + _z * cos(radians(_rX));
+
+        _x = v.x * cos(radians(_rY)) + (v.y * -sin(radians(_rX)) + v.z * cos(radians(_rX))) * -sin(radians(_rY));
+        _y = v.y * cos(radians(_rX)) + v.z * sin(radians(_rX));
+        _z = v.x * sin(radians(_rY)) + (v.y * -sin(radians(_rX)) + v.z * cos(radians(_rX))) * cos(radians(_rY));
+
+        return createVector(_x, _y, _z);
+    }
+
+</script>
+
+

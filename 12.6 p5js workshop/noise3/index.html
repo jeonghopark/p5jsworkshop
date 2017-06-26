@@ -1,0 +1,62 @@
+<style>
+    html,
+    body {
+        height: 100%;
+    }
+
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+
+<script src="p5.js"></script>
+
+<script>
+    var yInc = new Array();
+
+    var bNoise;
+    var lengthS;
+
+    var screenRatio = {
+        w: 0.8,
+        h: 0.5
+    };
+
+    function setup() {
+        createCanvas(windowWidth * screenRatio.w, windowHeight * screenRatio.h);
+        for (var i = 0; i < 20; i++) {
+            yInc[i] = random() * 100000;
+        }
+        bNoise = 0;
+        lengthS = 8;
+    }
+
+    function draw() {
+
+        fill(0, 25);
+        rect(0, 0, width, height);
+        stroke(255, 180);
+        lengthS = 8;
+
+        translate(0, 0);
+
+        for (var num = 0; num < yInc.length; num += 1) {
+            var yOffset = yInc[num];
+            for (var i = 0; i < width; i += lengthS) {
+                yOffset = yOffset + i;
+                var _y1 = noise(yOffset) * height;
+                var _y2 = noise(yOffset) * height;
+                line(i, _y1, i + lengthS, _y2);
+            }
+            yInc[num] = yInc[num] + 0.01;
+        }
+    }
+    
+    function windowResized() {
+        resizeCanvas(windowWidth * screenRatio.w, windowHeight * screenRatio.h);
+    }
+</script>

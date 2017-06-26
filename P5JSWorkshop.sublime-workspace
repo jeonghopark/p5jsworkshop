@@ -1,0 +1,695 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ste",
+				"_step"
+			],
+			[
+				"create",
+				"createVector"
+			],
+			[
+				"st",
+				"style\tTag"
+			],
+			[
+				"ra",
+				"radiusDt"
+			],
+			[
+				"radiu",
+				"radiusDt"
+			],
+			[
+				"tes",
+				"textS"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"c",
+				"canvas\tTag"
+			],
+			[
+				"for",
+				"for\tfor (…) {…}"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"fo",
+				"for\tfor (…) {…}"
+			],
+			[
+				"u",
+				"u_time"
+			],
+			[
+				"rend",
+				"renderer"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "12.6 p5js workshop/vertex_02/index.html",
+			"settings":
+			{
+				"buffer_size": 2256,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				]
+			],
+			[
+				"Packages/Makefile/Make.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 357.0,
+		"last_filter": "start",
+		"selected_items":
+		[
+			[
+				"start",
+				"SublimeServer: Start SublimeServer"
+			],
+			[
+				"open in bro",
+				"File: Open In Browser - Production Server"
+			],
+			[
+				"open in ",
+				"Terminal: Open in project folder"
+			],
+			[
+				"open in",
+				"File: Open In Browser - Production Server"
+			],
+			[
+				"openo",
+				"File: Open In Browser - Production Server"
+			],
+			[
+				"open in v",
+				"File: Open In Browser - Testing Server"
+			],
+			[
+				"star",
+				"SublimeServer: Start SublimeServer"
+			],
+			[
+				"open",
+				"File: Open In Browser - Production Server"
+			],
+			[
+				"open in br",
+				"File: Open In Browser - Production Server"
+			],
+			[
+				"open run",
+				"File: Open In Browser - Production Server"
+			],
+			[
+				"bea",
+				"HTMLBeautify"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"javasc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"beaut",
+				"HTMLBeautify"
+			],
+			[
+				"server",
+				"SublimeServer: Start SublimeServer"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"stop",
+				"SublimeServer: Stop SublimeServer"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"java",
+				"Javascript Beautify"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"ja",
+				"Javascript Beautify"
+			],
+			[
+				"serve",
+				"SublimeServer: Start SublimeServer"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"date ",
+				"InsertDate: Default"
+			],
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"git co",
+				"Git: Commit"
+			],
+			[
+				"git add",
+				"Git: Add All"
+			],
+			[
+				"insert",
+				"InsertDate: Default"
+			],
+			[
+				"git comm",
+				"Git: Commit"
+			],
+			[
+				"insert date",
+				"InsertDate: Default"
+			],
+			[
+				"git a",
+				"Git: Add All"
+			],
+			[
+				"insert dat",
+				"InsertDate: Default"
+			],
+			[
+				"insertdate de",
+				"InsertDate: Default"
+			],
+			[
+				"git c",
+				"Git: Commit"
+			],
+			[
+				"git coo",
+				"Git: Quick Commit (repo, only already added files)"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 122.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/jeonghopark/Projects/P5JSWorkshop",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/math_plane",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/math_SuperShape2D",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/math_SuperShape3D",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/math_vertex_basic",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/math_vertex_line",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/math_vertex_lines",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/math_vertex_plane",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/math_vertex_tristrip",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/noise0",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/noise1",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/noise1_center",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/noise1_l_edit",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/noise3",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/noise_poster",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/svg_01",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/vertex_02"
+	],
+	"file_history":
+	[
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/vertex_02/index.html",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/vertex_01/index.html",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/svg_01/index.html",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/svg_01/pattern.svg",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/svg_01/_3df.svg",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/math_SuperShape3D/index.html",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/noise1_l_edit/index.html",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/P5JSWorkshop.sublime-project",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/math_vertex_basic/index.html",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/math_SuperShape2D/index.html",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/math_MoebiusStrip/index.html",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/math_01/index.html",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/math_CornuSpiral_var/index.html",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/math_CornuSpiral/index.html",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/P5JSWorkshop.sublime-workspace",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/math_vertex_plane/index.html",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/math_vertex_tristrip/index.html",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/math_vertex_lines/index.html",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/math_vertex_line/index.html",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/math_5/index.html",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/math_6/index.html",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/math_4/index.html",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/font_0/index.html",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/font_0/p5.js",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/circle2_drawing/p5.js",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/circle_drawing/p5.js",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/noise_basic/index.html",
+		"/Users/jeonghopark/Library/Application Support/Sublime Text 3/Packages/User/SublimeServer.sublime-settings",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/math_3/index.html",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/noise1_center/index.html",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/math_3_plane/index.html",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/math_2/index.html",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/math_1/index.html",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/noise_poster/index.html",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/math_0/index.html",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/12.6 p5js workshop/noise3/index.html",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/p5JS_default_JS/index.html",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/jsonDataDefault/script.js",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/jsonDataDefault/animals.json",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/p5JS_default_JS/script.js",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/jsonDataDefault/index.html",
+		"/Users/jeonghopark/Projects/QuantifiedSelf/kleidung/kleidung_gewicht_02_text/sketch.js",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/wsdata/animals.json",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/pfb11400itmanagementopendataaachenvornamen2014.csv",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/pfb11-400it-managementopendatadatenfb34aachenvornamen2015.csv",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/_p5workshop_Surge/index.html",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/lineGenerativeArray/script.js",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/lineGenerative/script.js",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/perlinNoise/script.js",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/perlinNoise/index.html",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/perlinNoise/js/p5.js",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/_p5workshop/piText/js/p5.js",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/piText/index.html",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/_p5workshop/index.html",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/solarSystemCSV_color/index.html",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/_p5workshop/CNAME",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/_p5workshop/piText/assets/pi.txt",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/solarSystemCSV/index.html",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/csvLoad/index.html",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/csvLoad/assets/SolarSystem.csv",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/EllipseAnimation/index.html",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/BackgroundAnimation/index.html",
+		"/Users/jeonghopark/Projects/P5JSWorkshop/FirstSetup/index.html",
+		"/Volumes/Electra/Projects/oF_Sublimetext/sublime/OFProject.sublime-project",
+		"/Users/jeonghopark/Projects/Fahrrad/farhrad/js/script_drawing.js",
+		"/Users/jeonghopark/Projects/Fahrrad/farhrad/Chain.html",
+		"/Users/jeonghopark/Projects/Fahrrad/farhrad/js/paper-full.min.js",
+		"/Users/jeonghopark/Projects/Fahrrad/farhrad/js/script.js",
+		"/Users/jeonghopark/Projects/Fahrrad/farhrad/js/paper-full.js",
+		"/Users/jeonghopark/Projects/Fahrrad/farhrad/css/style.css",
+		"/Users/jeonghopark/Projects/ThreejsCode/defaultSettingSeparateStyle/js/script.js",
+		"/Users/jeonghopark/Projects/ThreejsCode/ShaderSphere/firstShaderSphere/index.html",
+		"/Users/jeonghopark/Projects/ThreejsCode/ShaderSphere/firstShaderSphere/js/script.js",
+		"/Users/jeonghopark/JavaScript/simple/first.js",
+		"/Users/jeonghopark/Projects/ThreejsCode/Threejs.sublime-project",
+		"/Users/jeonghopark/Projects/ThreejsCode/defaultSettingSeparateStyle/index.html",
+		"/Users/jeonghopark/Projects/Berlin2.0/firstConcept/script.js",
+		"/Users/jeonghopark/Projects/Berlin2.0/schwarmPoint/js/script.js",
+		"/Users/jeonghopark/Projects/Berlin2.0/schwarmPoint/index.html",
+		"/Users/jeonghopark/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/jeonghopark/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/jeonghopark/Projects/Berlin2.0/gravity/script.js",
+		"/Users/jeonghopark/Projects/Berlin2.0/flockingPoint/script.js",
+		"/Users/jeonghopark/Projects/Berlin2.0/flockingPoint/index.html",
+		"/Users/jeonghopark/jeonghopark.github.io/_layouts/default.html",
+		"/Users/jeonghopark/jeonghopark.github.io/_posts/2017-02-20-workNote.md",
+		"/Users/jeonghopark/jeonghopark.github.io/_posts/2017-02-13-workNote.md",
+		"/Users/jeonghopark/jeonghopark.github.io/_posts/2017-02-06-workNote.md",
+		"/Users/jeonghopark/Library/Application Support/Sublime Text 3/Packages/User/insert_date.sublime-settings",
+		"/Users/jeonghopark/Projects/Saturn/saturnRing/script.js"
+	],
+	"find":
+	{
+		"height": 48.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"_offset",
+			"0.5",
+			"10",
+			"random(5)",
+			"[i",
+			"i]",
+			"i",
+			"_index",
+			"_step",
+			"175",
+			"1.51",
+			"_xPos + ",
+			"10",
+			"w",
+			"90",
+			"rotX",
+			"360",
+			"y1",
+			"x1",
+			"time",
+			"let",
+			"var",
+			"1.0",
+			"PI",
+			"1.0",
+			"_size",
+			"v.",
+			"_dx",
+			"y2",
+			"x2",
+			"+ PI",
+			"let _dx",
+			"        // var L = 1000;\n",
+			"        // let L = 1000;\n",
+			"var",
+			") * dz",
+			" * 0.5",
+			"_y",
+			"_x",
+			"_y",
+			"_x",
+			"_y",
+			"_x",
+			"0.1",
+			"5",
+			"50",
+			"t)",
+			"thetae",
+			"radiuss",
+			"radiusS",
+			"t)",
+			"t",
+			"theta",
+			"radius",
+			"_num",
+			";",
+			"_dt",
+			"_th",
+			"4",
+			"     ",
+			" ",
+			"textFont",
+			"textMode",
+			"textFont",
+			"_renderer",
+			"testWidth",
+			"text.",
+			",",
+			"testWidth",
+			"\"Attention, please.\"",
+			"Open Sans",
+			"Roboto",
+			"Open Sans Condensed",
+			"Tangerine",
+			"_rY",
+			"_size",
+			"30",
+			"w",
+			"h",
+			"t",
+			"s",
+			"yOffset1",
+			"_y22",
+			"_y21",
+			"yOffset1",
+			"yOffset2",
+			"yOffset",
+			"_y2",
+			"_y1",
+			"yOffset1",
+			"yInc",
+			"yInc2",
+			"200",
+			"s+20",
+			"t1",
+			"s+1",
+			"ti",
+			"t",
+			"_",
+			"_z",
+			"_rX",
+			"_r",
+			"45",
+			"s",
+			"ind",
+			"radius",
+			"z",
+			") * radians(",
+			"Math.PI",
+			"* radians(",
+			"radians",
+			"radians(z) * radians(z)",
+			"Math.PI * ",
+			"z * z",
+			"z",
+			"radians",
+			"dt",
+			"\n            ",
+			";",
+			"();",
+			"255",
+			"254",
+			"255",
+			"drawingContext",
+			"fillStyle",
+			"fill()",
+			"fillRect",
+			"fillStyle"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "12.6 p5js workshop/vertex_02/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2256,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								526,
+								526
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 653.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 48.0
+	},
+	"input":
+	{
+		"height": 37.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 94.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 100.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "P5JSWorkshop.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/jeonghopark.github.io/jeonghopark.github.io.sublime-project"
+			],
+			[
+				"je",
+				"~/jeonghopark.github.io/jeonghopark.github.io.sublime-project"
+			],
+			[
+				"j",
+				"~/jeonghopark.github.io/jeonghopark.github.io.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 222.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 2
+	}
+}

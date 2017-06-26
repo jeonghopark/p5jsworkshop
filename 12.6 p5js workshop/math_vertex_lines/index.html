@@ -1,0 +1,70 @@
+<style>
+    html,
+    body {
+        height: 100%;
+    }
+
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+
+<script src="p5.js"></script>
+
+<script>
+    var screenRatio = {
+        w: 0.8,
+        h: 0.5
+    };
+
+    function setup() {
+        createCanvas(windowWidth * screenRatio.w, windowHeight * screenRatio.h);
+    }
+
+    function draw(){
+        background(245, 250, 255);
+        translate(width * 0.5, height * 0.5);
+        noFill();
+        stroke(100, 100, 200);        
+        strokeWeight(1);
+
+        // var _rX = map(mouseY, 0, height, 0, 360);
+        // var _rY = map(mouseX, 0, width, 0, 360);
+
+        beginShape(LINE_STRIP);
+        for (var num = 0; num < 100; num++) {
+            vertex(num * 5, 0);
+            vertex(num * 5, 10);
+        }
+        endShape();
+
+        endShape();
+
+    }
+
+    
+    function windowResized() {
+        resizeCanvas(windowWidth * screenRatio.w, windowHeight * screenRatio.h);
+    }
+
+
+    function rotationXY(v, _rX, _rY) {
+        // https://www.siggraph.org/education/materials/HyperGraph/modeling/mod_tran/3drota.htm
+        // _x1 = _x;
+        // _y1 = _y * cos(radians(_rX)) + _z * sin(radians(_rX));
+        // _z1 = _y * -sin(radians(_rX)) + _z * cos(radians(_rX));
+
+        _x = v.x * cos(radians(_rY)) + (v.y * -sin(radians(_rX)) + v.z * cos(radians(_rX))) * -sin(radians(_rY));
+        _y = v.y * cos(radians(_rX)) + v.z * sin(radians(_rX));
+        _z = v.x * sin(radians(_rY)) + (v.y * -sin(radians(_rX)) + v.z * cos(radians(_rX))) * cos(radians(_rY));
+
+        return createVector(_x, _y, _z);
+    }
+
+</script>
+
+

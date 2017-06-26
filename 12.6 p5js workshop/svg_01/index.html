@@ -1,0 +1,82 @@
+<style>
+    html,
+    body {
+        height: 100%;
+    }
+
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+
+<script src="p5.js"></script>
+
+<script>
+    var yInc = new Array();
+
+    var bNoise;
+    var lengthS;
+
+    var movePt = 0;
+
+    var screenRatio = {
+        w: 1.0,
+        h: 1.0
+    };
+
+
+    var netPostion = new Array();
+
+
+    function setup() {
+        createCanvas(windowWidth * screenRatio.w, windowHeight * screenRatio.h);
+    }
+
+    function draw() {
+        background(255);
+        makeNetPosition();
+        vertexBg();
+    }
+    
+    function windowResized() {
+        resizeCanvas(windowWidth * screenRatio.w, windowHeight * screenRatio.h);
+    }
+
+    
+    function vertexBg(){
+
+        fill(255, 0, 0);
+        beginShape(TRIANGLES);
+        for (var i = 0; i < netPostion.length-50; i++) {
+            vertex(netPostion[i].x, netPostion[i].y);
+            vertex(netPostion[i].x, netPostion[i+50].y);
+            vertex(netPostion[i+1].x, netPostion[i].y);
+        }
+        endShape();
+
+    }
+
+
+
+    function makeNetPosition(){
+        var _step = 50;
+        var index = 0;
+        for (var h=0; h<_step; h++){
+            for (var w=0; w<_step; w++){
+
+                index++;
+                var _x = w * _step;
+                var _y = h * _step;
+                netPostion.push(createVector(_x, _y));
+            }
+        }   
+
+        netPostion[0] = createVector(mouseX, mouseY);
+    }
+
+
+</script>

@@ -1,0 +1,85 @@
+<!-- http://paulbourke.net/geometry/supershape/ -->
+<style>
+    html,
+    body {
+        height: 100%;
+    }
+
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+
+<script src="p5.js"></script>
+
+<script>
+
+    var screenRatio = {
+        w: 0.8,
+        h: 0.5
+    };
+
+
+    var radius = 0;
+
+
+    function setup() {
+        createCanvas(windowWidth * screenRatio.w, windowHeight * screenRatio.h);
+    }
+
+    function draw(){
+        background(245, 250, 255);
+        translate(width * 0.5, height * 0.5);
+        noFill();
+        stroke(100, 100, 200);
+
+        var m = 1/6;
+        var n1 = 0.3;
+        var n2 = 0.3;
+        var n3 = 0.3;
+        var a = 1;
+        var b = 1;
+
+        var _size = 300;
+
+        var pointNum = 360 * 4;
+
+        beginShape(LINE_STRIP);
+        for (var theta=0; theta<=pointNum; theta++){
+            var _th = map(theta, 0, pointNum, 0, PI * 12);
+            radius = pow( (pow(abs(cos(m * _th / 4.0) / a), n2) + pow(abs(sin(m * _th / 4.0) / b), n3)), -1/n1);
+
+            var _x = cos(_th) * radius * _size;
+            var _y = sin(_th) * radius * _size;
+
+            vertex(_x, _y);
+        }
+        endShape();
+    }
+
+    
+    function windowResized() {
+        resizeCanvas(windowWidth * screenRatio.w, windowHeight * screenRatio.h);
+    }
+
+
+    function rotationXY(v, _rX, _rY) {
+        // https://www.siggraph.org/education/materials/HyperGraph/modeling/mod_tran/3drota.htm
+        // _x1 = _x;
+        // _y1 = _y * cos(radians(_rX)) + _z * sin(radians(_rX));
+        // _z1 = _y * -sin(radians(_rX)) + _z * cos(radians(_rX));
+
+        _x = v.x * cos(radians(_rY)) + (v.y * -sin(radians(_rX)) + v.z * cos(radians(_rX))) * -sin(radians(_rY));
+        _y = v.y * cos(radians(_rX)) + v.z * sin(radians(_rX));
+        _z = v.x * sin(radians(_rY)) + (v.y * -sin(radians(_rX)) + v.z * cos(radians(_rX))) * cos(radians(_rY));
+
+        return createVector(_x, _y, _z);
+    }
+
+</script>
+
+

@@ -1,0 +1,101 @@
+<style>
+    html,
+    body {
+        height: 100%;
+    }
+
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+
+<script src="p5.js"></script>
+
+<script>
+    var netPos = new Array();
+
+    var bNoise;
+    var lengthS;
+
+    var movePt = 0;
+
+    var screenRatio = {
+        w: 1.0,
+        h: 1.0
+    };
+
+    var _offset = 0;
+    var _offsetY = 0;
+
+    function setup() {
+        createCanvas(windowWidth * screenRatio.w, windowHeight * screenRatio.h);
+        makeNet();
+    }
+
+    function draw() {
+        background(255);
+        makeNet();
+        vertexBg();
+        netPos = new Array();
+    }
+    
+    function windowResized() {
+        resizeCanvas(windowWidth * screenRatio.w, windowHeight * screenRatio.h);
+    }
+
+    
+    function vertexBg(){
+
+        var _step = 20;
+        var _stepSize = 40;
+        for (var i = 0; i < _step-1; i++) {
+            for (var j = 0; j < _step-1; j++) {
+                var index = i + j * _step;
+                fill(120, 0, 0, 120);
+                beginShape(TRIANGLES);
+                vertex(netPos[index].x, netPos[index].y);
+                vertex(netPos[index+1].x, netPos[index+1].y);
+                vertex(netPos[index+_step].x, netPos[index+_step].y);
+                endShape(CLOSE);   
+                beginShape(TRIANGLES);
+                // fill(0, 120, 0, 120);
+                vertex(netPos[index+1].x, netPos[index+1].y);
+                vertex(netPos[index+1+_step].x, netPos[index+1+_step].y);
+                vertex(netPos[index+_step].x, netPos[index+_step].y);
+                endShape(CLOSE);   
+            }
+        }
+    }
+
+
+
+
+    function makeNet(){
+        var _step = 20;
+        var _stepSize = 40;
+
+
+        var _index = 0;
+        for (var h=0; h<_step; h++){
+            for (var w=0; w<_step; w++){
+
+                _offset = _offset + 0.001;
+                _offsetY = _offsetY + 0.001;
+                var _randomX = noise(_offset + w) * 10;
+                var _randomY = noise(_offsetY + h) * 10;
+
+                var _x = w * _stepSize + _randomX;
+                var _y = h * _stepSize + _randomY;
+
+                netPos.push(createVector(_x, _y));
+
+            }
+        }
+    }
+
+
+</script>

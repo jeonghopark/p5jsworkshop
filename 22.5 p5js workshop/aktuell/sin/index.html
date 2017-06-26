@@ -1,0 +1,28 @@
+<script src="p5.js"></script>
+
+<script>
+
+    var degree = 0;
+    var radius = 0;
+
+    var inc;
+
+    function setup(){
+        createCanvas(windowWidth, windowHeight);
+        inc = 0;
+    }
+
+    function draw(){
+        background(180);
+
+        inc = inc + 0.5;
+        var incC = sin(radians(inc)) * 100;
+        for (var i=0; i <1000; i++) {
+            push();
+            translate(i * 10, height * 0.5);
+            rotate(radians(i * 5 * incC));
+            rect(0, 0, incC, incC);
+            pop();
+        }
+    }
+</script>

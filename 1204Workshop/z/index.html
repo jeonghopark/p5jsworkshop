@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <script src="p5.js"></script>
+    
+    <style>
+        body{
+            margin: 0px;
+        }
+    </style>
+    
+</head>
+
+
+<body>
+
+    <script>
+        
+        var sdata;
+        
+        function preload(){
+            sdata = loadTable("SolarSystem.csv", "csv")
+        }
+        
+        
+        function setup() {
+            createCanvas(800, 600);
+            
+            for (var i=0; i<sdata.getRowCount(); i++) {
+                fill(0);
+                text(sdata.get(i,1), 10, 40 * i);
+                text(sdata.get(i,4), 100, 40 * i);
+
+                var psize2 = float( sdata.get(i,4) ) * 5; 
+                rect(200, 40 * i - 20, psize2, 20);
+                
+                
+                noFill();
+                var psize = float( sdata.get(i,4) ) * 5;
+                ellipse( width/2, height/2, psize, psize );
+            }
+            
+        }
+
+    </script>
+    
+
+</body>
+
+
+</html>

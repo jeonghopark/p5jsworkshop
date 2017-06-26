@@ -1,0 +1,40 @@
+<script type="text/javascript" src="p5.js"></script>
+
+<script type="text/javascript">
+
+
+    function setup() {
+        createCanvas(windowWidth, windowHeight);
+
+    }
+
+    function draw() {
+        background(255);
+
+        var yoff1 = 0;
+        var yoff2 = 0;
+        var yoff3 = 0;
+
+        for (var w = 0; w < windowWidth; w += 2) {
+            yoff1 = yoff1 + 0;
+            var y = noise(yoff1) * 200 + 100;
+            line(w * 5, y, w * 5, 200);
+            ellipse(w * 5, y, 4, 4);
+
+            yoff2 = yoff2 + 0.01;
+            var y = noise(yoff2) * 200 + 300;
+            line(w * 5, y, w * 5, 400);
+            ellipse(w * 5, y, 4, 4);
+
+            yoff3 = yoff3 + 0.1;
+            var y = noise(yoff3) * 200 + 500;
+            line(w * 5, y, w * 5, 600);
+            ellipse(w * 5, y, 4, 4);
+        }
+    }
+
+    function windowResized(){
+        createCanvas(windowWidth, windowHeight);
+    }
+
+</script>

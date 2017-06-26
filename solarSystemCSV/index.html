@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+	<title>__First</title>
+	<script type="text/javascript" src="js/p5.js"></script>
+
+	<style>
+		body {
+            background-color: aqua;
+            text-align: center;
+            margin: 0px;
+		}
+	</style>
+
+</head>
+    
+<body>
+
+	<script type="text/javascript">
+        
+        var solarSystem;
+
+		function preload(){
+			solarSystem = loadTable("assets/SolarSystem.csv", "csv", "header");
+		}
+
+        function setup(){
+			createCanvas(windowWidth, windowHeight);
+			noFill();
+            
+            console.log(solarSystem.get(0, 1));
+            console.log(solarSystem.getColumnCount());
+			
+            background(255);
+            stroke(0,180);
+            
+            translate(width * 0.5, height * 0.5);
+
+            for (var i = 0; i < solarSystem.getRowCount(); i++) {
+				var _size = float(solarSystem.get(i, 4)) * 5;
+				var _distance = float(solarSystem.get(i, 7)) * 20
+				ellipse(_distance, 0, _size, _size);
+			}
+            
+            
+        }
+
+//		function draw(){
+//		}
+
+	</script>
+
+</body>
+</html>
+
+
+

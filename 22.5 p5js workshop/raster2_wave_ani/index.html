@@ -1,0 +1,26 @@
+<script type="text/javascript" src="p5.js"></script>
+
+
+<script type="text/javascript">
+    var rot;
+
+    function setup() {
+        createCanvas(800, 600);
+        rot = 0;
+    }
+
+    function draw() {
+        background(60);
+        rot = rot + 10;
+        for (var w = 0; w < 80; w++) {
+            for (var h = 0; h < 60; h++) {
+                push();
+                translate(w * 10, h * 10);
+                rotate(radians(w * 4 + rot));
+                rotate(radians(h * 4 + rot));
+                rect(0, 0, 10, 10);
+                pop();
+            }
+        }
+    }
+</script>

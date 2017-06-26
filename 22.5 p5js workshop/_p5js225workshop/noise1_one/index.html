@@ -1,0 +1,28 @@
+<script type="text/javascript" src="p5.js"></script>
+
+<script type="text/javascript">
+
+    var inc;
+    var incoff;
+
+    function setup() {
+        createCanvas(800, 800);
+        inc = 0.01;
+        incoff = 0;
+    }
+
+    function draw() {
+        background(255);
+
+        var xoff = incoff;
+
+        for (var w = 0; w < 160; w += 2) {
+            xoff = xoff + inc;
+            var y = noise(xoff) * 200 + 300;
+            line(w * 5, y, w * 5, 400);
+            ellipse(w * 5, y, 4, 4);
+        }
+
+        incoff = incoff + 0.01;
+    }
+</script>
