@@ -69,6 +69,8 @@
         for (var theta=0; theta<_tNum; theta++){
             for (var delta=0; delta<_dNum-1; delta++){
 
+                fill(theta * 12, 0, 0);
+
                 var _th = map(theta, 0, _tNum, -PI, PI);
                 var _dt = map(delta, 0, _dNum-1, -PI/2, PI/2);
                 radiusTh = pow( (pow(abs(cos(m * _th / 4.0) / a), n2) + pow(abs(sin(m * _th / 4.0) / b), n3)), -1/n1);
@@ -80,9 +82,6 @@
 
                 var v = createVector(0, 0, 0);
                 v = rotationXY( createVector(_x, _y, _z), _rX, _rY);
-                
-                fill(theta * 12, 0, 0);
-
                 vertex(_x, _y, _z);
 
 
@@ -93,7 +92,6 @@
                 var _x1 = radiusTh1 * cos(_th1) * radiusDt1 * cos(_dt1) * _size;
                 var _y1 = radiusTh1 * sin(_th1) * radiusDt1 * cos(_dt1) * _size;
                 var _z1 = radiusDt1 * sin(_dt1) * _size;
-
 
                 var v1 = createVector(0, 0, 0);
                 v1 = rotationXY( createVector(_x1, _y1, _z), _rX, _rY);
